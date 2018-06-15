@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { compose } from 'redux';
 
 class Todoitem extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
     render() {
-        debugger
-        return <li key={this.props.element.id}>{this.props.element.value}</li>
+        console.log("test")
+        return (
+            <li key={this.props.element.id}>{this.props.element.value}</li>
+        )
     }
 }
 

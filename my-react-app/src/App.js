@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
 import './App.css';
 import Todo from './Todo'
 
@@ -17,7 +16,6 @@ class App extends Component {
               { id: 0, value: 'val1' },
               { id: 1, value: 'vals' }
             ]} />
-
       </div>
     );
   }
