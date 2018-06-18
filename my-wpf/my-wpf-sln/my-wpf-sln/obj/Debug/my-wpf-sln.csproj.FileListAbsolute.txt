@@ -1,0 +1,15 @@
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\bin\Debug\my-wpf-sln.exe.config
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\bin\Debug\my-wpf-sln.exe
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\bin\Debug\my-wpf-sln.pdb
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln.csprojAssemblyReference.cache
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\MainWindow.g.cs
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\App.g.cs
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln_MarkupCompile.cache
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln_MarkupCompile.lref
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\MainWindow.baml
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln.g.resources
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my_wpf_sln.Properties.Resources.resources
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln.csproj.GenerateResource.cache
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln.csproj.CoreCompileInputs.cache
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln.exe
+C:\Users\syvee\Documents\repo\github\babe-playground\my-wpf\my-wpf-sln\my-wpf-sln\obj\Debug\my-wpf-sln.pdb
