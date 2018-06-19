@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid'
-import './App.css';
+import '../App.css';
 import Todoitem from './Todoitem'
 import Ticktick from './Ticktick'
 import AddTodo from './AddTodo'

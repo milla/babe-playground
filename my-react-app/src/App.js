@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import Todo from './Todo'
-import Projects from './Components/Projects'
+import Todo from './Components/Todo'
 
 class App extends Component {
   render() {
