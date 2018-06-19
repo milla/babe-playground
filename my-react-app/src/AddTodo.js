@@ -10,16 +10,18 @@ class AddTodo extends Component {
     AddTodo() {
         if (this.textInput.current.value === '')
             alert('please input text');
-        else
+        else {
             this.props.onAdd(this.textInput.current.value);
+            this.textInput.current.value = '';
+        }
     }
 
     render() {
         return (
-            <div>
-                <input type='text' ref={this.textInput}/>
-                <input type='button' ref='' value='Add' onClick={this.AddTodo.bind(this)} />
-            </div>
+            <form onSubmit={this.AddTodo.bind(this)}>
+                <input type='text' ref={this.textInput} />{' '}
+                <input type='submit' ref='' value='Add' />
+            </form >
         )
     }
 }

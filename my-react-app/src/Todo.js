@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
+import uuid from 'uuid'
 import './App.css';
 import Todoitem from './Todoitem'
 import Ticktick from './Ticktick'
 import AddTodo from './AddTodo'
-import uuid from 'uuid'
+import TodoLinks from './TodoLinks'
+import TodoList from './TodoList'
 
-function Name(params) {
-    return <li>{params.text}</li>
-}
+var allList = []
 class Todo extends Component {
+
     constructor() {
         super();
-        this.handleClick = this.handleClick.bind(this);
         this.onDelete = this.onDelete.bind(this);
 
         let [...list] = []
-        this.state = { list: [] };
+        this.state = { list: [], filter: 'All' };
+        allList = []
+        this.onFilterShow = this.onFilterShow.bind(this)
     }
-
-    onclick() {
-        this.props.onclick();
+    static defaultProps = {
+        currentFliter: 'All'
     }
     onDelete(todoId) {
         let prev = this.state;
@@ -33,64 +34,76 @@ class Todo extends Component {
         //         return prev.filter(o=>o.id != action.id);
         //     }
         // });
-
-        this.setState({ list: prev.list.filter(o => o.id != todoId) })
+        allList = prev.list.filter(o => o.id != todoId)
+        this.setState({
+            list: allList,
+            filter: this.state.filter
+        })
     }
-    handleClick(e) {
 
-        e.preventDefault();
-        console.log('test')
+    onToggleDone(todoId) {
+        let list = this.state.list;
+        let item = list.find(o => o.id == todoId)
+        item.isComplete = !item.isComplete;
 
+        this.setState({
+            list: list,
+            filter: this.state.filter
+        })
     }
+
+    onFilterShow(filter) {
+        switch (filter) {
+            case "All":
+                this.setState({
+                    list: allList,
+                    filter
+                });
+                break;
+
+            case 'Completed':
+                this.setState({
+                    list: allList.filter(o => o.isComplete),
+                    filter
+                });
+                break;
+
+            case 'Active':
+                this.setState({
+                    list: allList.filter(o => !o.isComplete),
+                    filter
+                });
+                break;
+
+            default:
+                return this.state;
+        }
+    }
+
     componentDidMount() {
-        console.log('did mount')
+        console.log('mount')
     }
-
-    componentWillUnmount() {
-        console.log('will mount')
-
-    }
-
     onAdd(name) {
-        console.log('to add item')
-        debugger
-        if (this.state.list.length <= 0)
-            this.setState({ list: [{ id: uuid.v4(), value: name }] })
-        else
-            this.setState({
-                list: [...this.state.list,
-                { id: uuid.v4(), value: name }]
-            })
+        allList.push({ id: uuid.v4(), value: name, isComplete: false })
+        this.setState({
+            list: allList,
+            filter: this.state.filter
+        })
     }
 
     render() {
         const list = this.props.list;
-        this.props.list.forEach(element => {
-            console.log(element.id)
-        })
-        const els = this.props.list.map((el) =>
-            <Todoitem
-                key={el.id}
-                onDelete={this.onDelete.bind(this, el.id)}
-                element={el} />
-        );
         return (
             <div>
                 <h4>Todo List:</h4>
                 <Ticktick />
-                <AddTodo onAdd={this.onAdd.bind(this)} />
-                <ul>
-                    {this.state.list.length > 0 &&
-                        this.state.list.map((el) =>
-                            <Todoitem
-                                key={el.id} element={el}
-                                onDelete={this.onDelete.bind(this, el.id)} />
-                        )
-                    }
-                </ul>
-
-                {this.props.text}{'  '}
-                <input type="button" value="Click me, aha!" onClick={this.handleClick} />
+                <AddTodo
+                    onAdd={this.onAdd.bind(this)} />
+                <TodoList list={this.state.list}
+                    onDelete={this.onDelete}
+                    onToggleDone={this.onToggleDone.bind(this)} />
+                <TodoLinks currentFliter={this.state.filter}
+                    onFilterShow={this.onFilterShow} />
             </div>
         )
     }

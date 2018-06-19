@@ -8,16 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Todo text="I will be alright" onclick={
-          () => { console.log('clicked'); }}
-          list={
-            [
-              { id: 0, value: 'val1' },
-              { id: 1, value: 'vals' }
-            ]} />
-
-            <Projects/>
-            
+        <Todo />
       </div>
     );
   }

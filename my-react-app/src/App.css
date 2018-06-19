@@ -10,3 +10,20 @@
 
 .remove-item{
 }
+
+.App{
+  margin:20px;
+}
+
+.none_line{
+  text-decoration: none
+}
+
+.link{
+  text-decoration: underline
+}
+
+.loading{
+  width:100%;
+  margin:auto;
+}
